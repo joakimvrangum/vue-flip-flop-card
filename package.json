@@ -1,0 +1,16 @@
+{
+  "name": "@joakimvrangum/vue-flip-flop-card",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joakimvrangum/vue-flip-flop-card.git"
+  },
+  "author": "Joakim Vrangum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joakimvrangum/vue-flip-flop-card/issues"
+  },
+  "homepage": "https://github.com/joakimvrangum/vue-flip-flop-card#readme"
+}
