@@ -66,11 +66,9 @@ export default {
   }
 
   &__front {
-    background-color: cadetblue;
   }
 
   &__back {
-    background-color: coral;
     transform: rotateY(180deg);
   }
 
