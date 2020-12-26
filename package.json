@@ -2,7 +2,6 @@
   "name": "@joakimvrangum/vue-flip-flop-card",
   "description": "",
   "version": "0.0.1",
-  "private": false,
   "main": "./dist/vue-flip-flop-card.common.js",
   "repository": {
     "type": "git",
