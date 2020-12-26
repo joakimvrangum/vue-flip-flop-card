@@ -1,5 +1,5 @@
 {
-  "name": "@joakimvrangum/vue-flip-flop-card",
+  "name": "vue-flip-flop-card",
   "description": "",
   "version": "0.0.1",
   "main": "./dist/vue-flip-flop-card.common.js",
@@ -19,11 +19,7 @@
     "build-library": "vue-cli-service build --target lib --name vue-flip-flop-card ./src/install.js"
   },
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "dist/*"
   ],
   "dependencies": {
     "core-js": "^3.6.5",
