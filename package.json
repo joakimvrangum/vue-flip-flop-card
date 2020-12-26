@@ -2,7 +2,7 @@
   "name": "@joakimvrangum/vue-flip-flop-card",
   "description": "",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "main": "./dist/vue-flip-flop-card.common.js",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library" : "vue-cli-service build --target lib --name vue-flip-flop-card ./src/install.js"
+    "build-library": "vue-cli-service build --target lib --name vue-flip-flop-card ./src/install.js"
   },
   "files": [
     "dist/*",
@@ -33,6 +33,8 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",
     "@vue/cli-service": "^4.5.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
