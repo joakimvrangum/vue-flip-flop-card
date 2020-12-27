@@ -16,20 +16,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library": "vue-cli-service build --target lib --name vue-flip-flop-card ./src/install.js"
+    "build-library": "vue-cli-service build --target lib --name vue-flip-flop-card ./src/entry.js"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "src/*"
   ],
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",
     "@vue/cli-service": "^4.5.0",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
+    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   }
 }
