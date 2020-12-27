@@ -1,13 +1,13 @@
 <template>
   <div
       class="flip-flop-card"
-      :style="{'height': height + 'px', 'width': width + 'px'}"
+      :style="{ 'height': height + 'px', 'width': width + 'px' }"
   >
-    <div class="flip-flop-card__front">
+    <div class="flip-flop-card__front" :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}">
       <slot name="front"></slot>
     </div>
 
-    <div class="flip-flop-card__back">
+    <div class="flip-flop-card__back" :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}">
       <slot name="back"></slot>
     </div>
   </div>
@@ -38,7 +38,19 @@ export default {
     },
     speed: {
       type: Number,
+      default: 5
+    },
+    elevation: {
+      type: Number,
       default: 4
+    }
+  },
+  computed: {
+    transformSpeed() {
+      return `transform ${(this.speed / 6.5)}s ease`;
+    },
+    elevationEffect() {
+      return `0 0 12px rgba(173, 173, 173, ${(this.elevation / 10)})`;
     }
   }
 }
@@ -50,6 +62,7 @@ export default {
   position: relative;
   perspective: 1000px;
   -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
 
   &__front,
   &__back {
@@ -60,8 +73,8 @@ export default {
     width: 100%;
     overflow: hidden;
     backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transition: transform .6s ease;
     transform-style: preserve-3d;
   }
 
