@@ -42,7 +42,7 @@ export default {
     },
     elevation: {
       type: Number,
-      default: 4
+      default: 2
     }
   },
   computed: {
@@ -83,13 +83,19 @@ export default {
 
   &__back {
     transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
   }
 
   &:hover &__front {
     transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
   }
   &:hover &__back {
     transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
   }
 }
 </style>
