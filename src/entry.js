@@ -1,11 +1,11 @@
 // Import vue component
-import component from '@/vue-flip-flop-card.vue';
+import component from '@/flip-flop-card.vue';
 
 // install function executed by Vue.use()
 const install = function installVueFlipFlopCard(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('VueFlipFlopCard', component);
+  Vue.component('FlipFlopCard', component);
 };
 
 // Create module definition for Vue.use()

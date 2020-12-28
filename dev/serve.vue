@@ -1,17 +1,17 @@
 <script>
 import Vue from 'vue';
-import VueFlipFlopCard from '@/vue-flip-flop-card.vue';
+import FlipFlopCard from '@/flip-flop-card.vue';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
-    VueFlipFlopCard
+    FlipFlopCard
   }
 });
 </script>
 
 <template>
   <div id="app">
-    <vue-flip-flop-card />
+    <flip-flop-card />
   </div>
 </template>
