@@ -1,7 +1,7 @@
 {
   "name": "vue-flip-flop-card",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "dist/vue-flip-flop-card.ssr.js",
   "browser": "dist/vue-flip-flop-card.esm.js",
   "module": "dist/vue-flip-flop-card.esm.js",
