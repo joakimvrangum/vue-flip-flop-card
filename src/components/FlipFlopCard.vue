@@ -42,7 +42,7 @@ export default {
     },
     elevation: {
       type: Number,
-      default: 2
+      default: 0
     }
   },
   computed: {
