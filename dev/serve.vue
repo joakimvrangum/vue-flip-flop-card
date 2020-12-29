@@ -12,6 +12,12 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <flip-flop-card />
+    <flip-flop-card :elevation="8">
+      <template slot="front">
+        <div class="container" style="background-color: antiquewhite;">
+
+        </div>
+      </template>
+    </flip-flop-card>
   </div>
 </template>
