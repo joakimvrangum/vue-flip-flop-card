@@ -3,11 +3,19 @@
       class="flip-flop-card"
       :style="{ 'height': height + 'px', 'width': width + 'px' }"
   >
-    <div class="flip-flop-card__front" :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}">
+    <div
+        class="flip-flop-card__front"
+        :class="[direction, disabled && 'disabled']"
+        :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
+    >
       <slot name="front"></slot>
     </div>
 
-    <div class="flip-flop-card__back" :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}">
+    <div
+        class="flip-flop-card__back"
+        :class="[direction, disabled && 'disabled']"
+        :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
+    >
       <slot name="back"></slot>
     </div>
   </div>
@@ -29,7 +37,7 @@ export default {
       type: String,
       default: 'horizontal',
       validator: function (value) {
-        return ['horizontal', 'vertical'].indexOf(value) !== -1
+        return ['horizontal', 'vertical'].indexOf(value.toLowerCase()) !== -1
       }
     },
     disabled: {
@@ -80,26 +88,48 @@ export default {
     ::v-deep .container {
       height: 100%;
     }
+
   }
 
   &__front {
   }
 
   &__back {
-    transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
+    &.horizontal {
+      transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+    }
+    &.vertical {
+      -webkit-transform: rotateX(-180deg);
+      -moz-transform: rotateX(-180deg);
+      transform: rotateX(-180deg);
+    }
   }
 
   &:hover &__front {
-    transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -webkit-transform: rotateY(-180deg);
+    &.horizontal {
+      transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      -webkit-transform: rotateY(-180deg);
+    }
+    &.vertical {
+      -webkit-transform: rotateX(180deg);
+      -moz-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+    }
   }
   &:hover &__back {
-    transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -webkit-transform: rotateY(0);
+    &.horizontal {
+      transform: rotateY(0);
+      -moz-transform: rotateY(0);
+      -webkit-transform: rotateY(0);
+    }
+    &.vertical {
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
   }
 }
 </style>
