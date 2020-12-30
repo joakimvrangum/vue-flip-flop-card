@@ -84,6 +84,7 @@ export default {
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 
     ::v-deep .container {
       height: 100%;
