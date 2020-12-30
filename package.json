@@ -1,6 +1,7 @@
 {
   "name": "vue-flip-flop-card",
   "description": "",
+  "keywords": ["vue", "vuejs", "component", "javascript", "card", "flip card"],
   "version": "0.1.1",
   "main": "dist/vue-flip-flop-card.ssr.js",
   "browser": "dist/vue-flip-flop-card.esm.js",
