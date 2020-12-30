@@ -5,7 +5,7 @@
   >
     <div
         class="flip-flop-card__front"
-        :class="[direction, disabled && 'disabled']"
+        :class="[!disabled && direction, disabled && 'disabled']"
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
       <slot name="front"></slot>
@@ -13,7 +13,7 @@
 
     <div
         class="flip-flop-card__back"
-        :class="[direction, disabled && 'disabled']"
+        :class="[!disabled && direction, disabled && 'disabled']"
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
       <slot name="back"></slot>
