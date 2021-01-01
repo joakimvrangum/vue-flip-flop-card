@@ -8,7 +8,13 @@
         :class="[!disabled && direction, disabled && 'disabled']"
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
-      <slot name="front"></slot>
+      <slot v-if="!styledFront" name="front"></slot>
+      <div v-else class="styled">
+        <div class="styled__image" :style="styledFrontImage"></div>
+        <h4 class="card__heading">
+          <span class="card__heading-span">Styled heading</span>
+        </h4>
+      </div>
     </div>
 
     <div
@@ -51,6 +57,12 @@ export default {
     elevation: {
       type: Number,
       default: 0
+    },
+    styledFront: {
+      type: Object
+    },
+    styledBack: {
+      type: Object
     }
   },
   computed: {
@@ -59,6 +71,14 @@ export default {
     },
     elevationEffect() {
       return `0 0 12px rgba(173, 173, 173, ${(this.elevation / 10)})`;
+    },
+    styledFrontImage() {
+      return `background-image: linear-gradient(
+        to right,
+        ${this.styledFront.themeColor1},
+        ${this.styledFront.themeColor2}),
+        url(${this.styledFront.headerImage}
+      );`;
     }
   }
 }
@@ -127,9 +147,18 @@ export default {
       -webkit-transform: rotateY(0);
     }
     &.vertical {
-      -webkit-transform: rotateX(0deg);
-      -moz-transform: rotateX(0deg);
       transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+    }
+  }
+
+  .styled {
+    &__image {
+      background-size: cover;
+      height: 10rem;
+      background-blend-mode: screen;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
   }
 }
