@@ -9,10 +9,11 @@
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
       <slot v-if="!styledFront" name="front"></slot>
+
       <div v-else class="styled">
         <div class="styled__image" :style="styledFrontImage"></div>
-        <h4 class="card__heading">
-          <span class="card__heading-span">Styled heading</span>
+        <h4 class="styled__heading">
+          <span class="styled__heading-span">Styled heading</span>
         </h4>
       </div>
     </div>
@@ -73,12 +74,8 @@ export default {
       return `0 0 12px rgba(173, 173, 173, ${(this.elevation / 10)})`;
     },
     styledFrontImage() {
-      return `background-image: linear-gradient(
-        to right,
-        ${this.styledFront.themeColor1},
-        ${this.styledFront.themeColor2}),
-        url(${this.styledFront.headerImage}
-      );`;
+      return `background-image: linear-gradient(to right, ${this.styledFront.themeColor || 'transparent'}, ${this.styledFront.themeColor2  || 'transparent'}), url(${this.styledFront.headerImage});`
+          + `height: ${this.height * 0.35}px;`;
     }
   }
 }
@@ -110,9 +107,6 @@ export default {
       height: 100%;
     }
 
-  }
-
-  &__front {
   }
 
   &__back {
@@ -156,7 +150,6 @@ export default {
   .styled {
     &__image {
       background-size: cover;
-      height: 10rem;
       background-blend-mode: screen;
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
