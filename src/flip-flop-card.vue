@@ -15,7 +15,9 @@
         <h4 v-if="styledFront.coverTitle" class="styled__title">
           <span class="styled__title-span" :style="styledFrontTitle">{{styledFront.coverTitle}}</span>
         </h4>
-        <slot name="styled-front-content"></slot>
+        <div class="styled__content">
+          <slot name="styled-front-content"></slot>
+        </div>
       </div>
     </div>
 
@@ -177,12 +179,15 @@ export default {
       position: absolute;
       top: 30%;
       right: 0;
-
       &-span {
         padding: 0.7rem 1rem;
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
       }
+    }
+    &__content {
+      position: absolute;
+      top: 44%;
     }
   }
 }
