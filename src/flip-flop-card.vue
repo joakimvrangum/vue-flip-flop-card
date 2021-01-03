@@ -45,14 +45,26 @@
 export default {
   name: 'FlipFlopCard',
   props: {
+    /**
+     * Height of the card in pixels
+     * @param {number} height
+     */
     height: {
       type: Number,
       default: 450
     },
+    /**
+     * Width of the card in pixels
+     * @param {number} width
+     */
     width: {
       type: Number,
       default: 350,
     },
+    /**
+     * Direction of the flip
+     * @param {string} either; horizontal or vertical
+     */
     direction: {
       type: String,
       default: 'horizontal',
@@ -60,14 +72,26 @@ export default {
         return ['horizontal', 'vertical'].indexOf(value.toLowerCase()) !== -1
       }
     },
+    /**
+     * Disabled the flip effect of the card
+     * @param {boolean} false
+     */
     disabled: {
       type: Boolean,
       default: false
     },
+    /**
+     * A calculated speed on the transition flip-effect
+     * @param {number} value between 1-10; 1 being fastest and 10 being slowest
+     */
     speed: {
       type: Number,
       default: 5
     },
+    /**
+     * The border box-shadow effect
+     * @param {number} value between 0-10. Default is 0
+     */
     elevation: {
       type: Number,
       default: 0
