@@ -31,10 +31,9 @@ Vue.use(FlipFlopCard);
 
 ### Example usage
 
-Component usage with just bare **slots** for custom content:
+Component usage with just bare <u>**slots**</u> for custom content:
 
 ```vue
-
 <flip-flop-card>
 <slot name="front">
   <h2>Front</h2>
@@ -50,11 +49,34 @@ Component usage with just bare **slots** for custom content:
 Notes; within the slot, wrapping the content in a `<div>` with a class named `container` will automatically apply full
 height of the card.
 
-Component usage with **styled card**;
+Component usage with <u>**styled card**</u>;
 
 ```vue
-
-<flip-flop-card></flip-flop-card>
+<template>
+  <flip-flop-card
+      :styled-front="optionsFrontCard"
+      :styled-back="optionsBackCard"
+  ></flip-flop-card>
+</template>
+```
+Example options set in object;
+```vue
+<script>
+export default {
+  data() {
+    return {
+      optionsFrontCard: {
+        headerImage: 'https://images.unsplash.com/photo-1608903837898-17a1f38bbf6c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80',
+        themeColor: '#64ce87',
+        themeColor2: '#188d65',
+      },
+      optionsBackCard: {
+        bgFillColor: true
+      }
+    }
+  }
+}
+</script>
 ```
 
 ### Props
