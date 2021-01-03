@@ -15,7 +15,7 @@
         <h4 v-if="styledFront.coverTitle" class="styled__title">
           <span class="styled__title-span" :style="styledFrontTitle">{{styledFront.coverTitle}}</span>
         </h4>
-        <slot name="styled-content"></slot>
+        <slot name="styled-front-content"></slot>
       </div>
     </div>
 
