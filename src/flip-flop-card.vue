@@ -26,8 +26,18 @@
         :class="[!disabled && direction, disabled && 'disabled']"
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
-      <slot name="back"></slot>
-    </div>
+      <slot v-if="!styledBack" name="back"></slot>
+
+      <div v-else class="styled">
+        <div class="styled__image" :style="styledBackImage"></div>
+        <h4 v-if="styledBack.coverTitle" class="styled__title">
+          <span class="styled__title-span" :style="styledBackTitle">{{styledBack.coverTitle}}</span>
+        </h4>
+        <div class="styled__content">
+          <slot name="styled-back-content"></slot>
+        </div>
+      </div>
+      </div>
   </div>
 </template>
 
@@ -82,6 +92,13 @@ export default {
     },
     styledFrontTitle() {
       return `background-image: linear-gradient(to right bottom, ${this.convertHexToRGB(this.styledFront.themeColor)}, ${this.convertHexToRGB(this.styledFront.themeColor2)});`;
+    },
+    styledBackImage() {
+      return `background-image: linear-gradient(to right, ${this.styledBack.themeColor || 'transparent'}, ${this.styledBack.themeColor2  || 'transparent'}), url(${this.styledBack.coverImg});`
+          + `height: ${this.height * 0.35}px;`;
+    },
+    styledBackTitle() {
+      return `background-image: linear-gradient(to right bottom, ${this.convertHexToRGB(this.styledBack.themeColor)}, ${this.convertHexToRGB(this.styledBack.themeColor2)});`;
     }
   },
   methods: {
