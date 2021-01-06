@@ -118,7 +118,8 @@ Property | Option | Datatype | Description
 
 ### Todo
 
--[ ] Refactor styled card
+-[ ] Implement custom ways to trigger flip (not just `:hover`)
+-[x] Refactor styled card
 -[ ] Implement git release and tagging, link via changelog
 -[ ] Improve styled card options. BgColorFill, alternative shading for title, etc..
 
