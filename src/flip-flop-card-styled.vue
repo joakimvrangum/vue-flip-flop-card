@@ -5,7 +5,8 @@
       <span class="styled__title-span" :style="styledTitle">{{ styleObj.coverTitle }}</span>
     </h4>
     <div class="styled__content">
-      <slot name="styled-front-content"></slot>
+      <slot v-if="front" name="front"></slot>
+      <slot v-if="back" name="back"></slot>
     </div>
   </div>
 </template>
@@ -16,6 +17,14 @@ export default {
     styleObj: {
       type: Object,
       required: true
+    },
+    front: {
+      type: Boolean,
+      default: false
+    },
+    back: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {

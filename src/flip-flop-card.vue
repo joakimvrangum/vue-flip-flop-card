@@ -9,7 +9,7 @@
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
       <slot v-if="!styledFront" name="front"></slot>
-      <styled-card v-else :styleObj="styledFront">
+      <styled-card v-else :styleObj="styledFront" front>
         <slot v-for="(_, name) in $slots" :name="name" :slot="name" />
       </styled-card>
     </div>
@@ -20,7 +20,7 @@
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
       <slot v-if="!styledBack" name="back"></slot>
-      <styled-card v-else :styleObj="styledBack">
+      <styled-card v-else :styleObj="styledBack" back>
         <slot v-for="(_, name) in $slots" :name="name" :slot="name" />
       </styled-card>
       </div>
