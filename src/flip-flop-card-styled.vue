@@ -1,5 +1,5 @@
 <template>
-  <div class="styled">
+  <div class="styled" :style="styleObj.bgColorFill ? bgColor : null">
     <div class="styled__image" :style="styledImage"></div>
     <h4 v-if="styleObj.coverTitle" class="styled__title">
       <span class="styled__title-span" :style="styledTitle">{{ styleObj.coverTitle }}</span>
@@ -28,6 +28,9 @@ export default {
     }
   },
   computed: {
+    bgColor() {
+      return `background: linear-gradient(${this.styleObj.themeColor || 'transparent'}, ${this.styleObj.themeColor2 || 'transparent'});`
+    },
     styledImage() {
       return `background-image: linear-gradient(to right, ${this.styleObj.themeColor || 'transparent'}, ${this.styleObj.themeColor2 || 'transparent'}), url(${this.styleObj.coverImg});`
           + `height: ${400 * 0.35}px;`;
@@ -53,6 +56,8 @@ export default {
 
 <style lang="scss" scoped>
 .styled {
+  height: 100%;
+
   &__image {
     background-size: cover;
     background-blend-mode: screen;
