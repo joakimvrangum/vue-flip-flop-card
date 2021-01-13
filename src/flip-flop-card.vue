@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import StyledCard from "./flip-flop-card-styled";
+import StyledCard from "./flip-flop-card-styled.vue";
 
 export default {
   name: 'FlipFlopCard',
