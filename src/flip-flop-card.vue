@@ -10,7 +10,7 @@
     >
       <slot v-if="!styledFront" name="front"></slot>
       <styled-card v-else :styleObj="styledFront" front>
-        <slot v-for="(_, name) in $slots" :name="name" :slot="name" />
+        <slot v-for="(_, name) in $slots" :name="name" :slot="name"/>
       </styled-card>
     </div>
 
@@ -21,14 +21,15 @@
     >
       <slot v-if="!styledBack" name="back"></slot>
       <styled-card v-else :styleObj="styledBack" back>
-        <slot v-for="(_, name) in $slots" :name="name" :slot="name" />
+        <slot v-for="(_, name) in $slots" :name="name" :slot="name"/>
       </styled-card>
-      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import StyledCard from "./flip-flop-card-styled";
+
 export default {
   name: 'FlipFlopCard',
   components: {StyledCard},
@@ -110,6 +111,11 @@ export default {
   -moz-perspective: 1000px;
   -webkit-perspective: 1000px;
 
+  h1, h2, h3, h4, h5, h6,
+  p, ul, ol {
+    margin: 0 0 1rem 0;
+  }
+
   &__front,
   &__back {
     position: absolute;
@@ -136,6 +142,7 @@ export default {
       -moz-transform: rotateY(180deg);
       -webkit-transform: rotateY(180deg);
     }
+
     &.vertical {
       -webkit-transform: rotateX(-180deg);
       -moz-transform: rotateX(-180deg);
@@ -149,18 +156,21 @@ export default {
       -moz-transform: rotateY(-180deg);
       -webkit-transform: rotateY(-180deg);
     }
+
     &.vertical {
       -webkit-transform: rotateX(180deg);
       -moz-transform: rotateX(180deg);
       transform: rotateX(180deg);
     }
   }
+
   &:hover &__back {
     &.horizontal {
       transform: rotateY(0);
       -moz-transform: rotateY(0);
       -webkit-transform: rotateY(0);
     }
+
     &.vertical {
       transform: rotateX(0deg);
       -moz-transform: rotateX(0deg);
