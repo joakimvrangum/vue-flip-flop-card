@@ -12,3 +12,6 @@ pnpm-debug.log*
 # IDE folders
 .vscode/
 .idea/
+
+# Local assets
+local/
