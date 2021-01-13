@@ -65,7 +65,7 @@ export default {
   }
 
   &__title {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
     text-align: right;
@@ -77,6 +77,7 @@ export default {
       padding: 0.7rem 1rem;
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
     }
   }
 
