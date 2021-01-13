@@ -7,27 +7,27 @@
 The is a card.. for vue.. that flips!
 
 Why the name flip-flop-card, you ask? Well, hopefully it will be just as easy to
-apply in your project as applying a set of flip flops to your feet. Oh, and the other names were taken, I guess 🤷‍♂️
+apply in a project, as applying a set of flip flops to your feet. Oh, and the other names were taken, I guess 🤷‍♂️
 
-This is my first attempt making a reusable npm-module, and it's mainly an exercise for me to learn how to package SFCs (Single File Components) for Vue via ***Rollupjs***, as well as getting into the habit of maintaining and documenting on npm and git. Not expecting it to work perfectly yet, but will try to maintain.
+This is my first ever attempt making a _reusable_ npm-module, and it's mainly an exercise for me to learn how to package SFCs (Single File Components) for Vue via ***rollupjs***, as well as getting into the habit of maintaining and documenting on npm and git. Not expecting it to work perfectly for all purposes.
 
-Feel free to report issues, fork, send feature/pull-requests or reuse for whatever purpose you see fit.
+Feel free to report issues, fork, send feature/pull-requests, or reuse for whatever purpose you see fit.
 
-<u>Disclaimer</u>: the author would like to emphasize that he doesn't wear flip flops. Ever.
+**Disclaimer**: the author would like to emphasize that he doesn't wear flip flops. Ever.
 
-### Preview
+## Preview
 
 ![Preview horizontal flip](preview1.gif)
 ![Preview vertical flip](preview2.gif)
 ![Preview styled card](preview3.gif)
 
-### Installation
+## Installation
 
 ```bash
 npm install vue-flip-flop-card --save
 ```
 
-### Getting started
+## Getting started
 
 Within a Vue project, add these lines in your main.js or index.js
 
@@ -38,7 +38,7 @@ import FlipFlopCard from 'vue-flip-flop-card';
 Vue.use(FlipFlopCard);
 ```
 
-### Example usage
+## Example usage
 
 Component usage with just bare <u>**slots**</u> for custom content:
 
@@ -92,7 +92,7 @@ export default {
 </script>
 ```
 
-### Props
+## Props
 
 Prop | Type | Default Value | Description
 :---: | :---: | :---: | ---
@@ -108,7 +108,7 @@ Prop | Type | Default Value | Description
 Props are also documented within component, and can be found using the documentation shortcut in your IDE, such
 as `Ctrl + Q` in Jetbrains' Webstorm.
 
-### Styled card 🎴
+## Styled card 🎴
 
 The styled card is a pre-styled card where you pass in a set of options (as an object) that help theme how the card
 looks. The styled card consists of a header/cover image, title heading, and color styles for displaying content. The
@@ -122,7 +122,7 @@ Property | Option | Datatype | Description
 **themeColor2** | color | String | Optional alternative color for applying a linear-gradient shade
 **bgColorFill** | false / true | Boolean | Optional alternative to fill background-color with theme-colors
 
-### Slots
+## Slots
 
 Slots are used to pass content for the front or the back of the card. Both styled and regular blank cards use the same
 slot name (as of current version).
@@ -134,16 +134,16 @@ _front_ | _below_ styled cover-image and title | styled 🎴
 _back_ | the entire back of the card | regular
 _back_ | _below_ styled cover-image and title | styled 🎴
 
-### Todo
+## Todo
 
 - [ ] Implement custom ways to trigger flip (not just `:hover`)
 - [ ] Implement git release and tagging, link via changelog
 - [ ] More options for styled card. Alternative shading for title, slots, etc
 
-### Changelog
+## Changelog
 
 ...
 
-### License
+## License
 
 This package is open source and released under the MIT Licence.
