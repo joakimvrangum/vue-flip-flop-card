@@ -4,12 +4,14 @@
 [![license](https://img.shields.io/npm/l/vue-flip-flop-card.svg)](https://img.shields.io/npm/l/vue-flip-flop-card.svg)
 [![downloads](https://img.shields.io/npm/dt/vue-flip-flop-card.svg)](https://www.npmjs.com/package/vue-flip-flop-card)
 
+<img align="left" height="200" src="https://raw.githubusercontent.com/joakimvrangum/vue-flip-flop-card/314a7fddd0faa90699dea4ee858a8165e57bff8c/icon.svg?token=AE3OCB4DZ5EBTIOYUUFXB42775NDO">
+
 The is a card.. for vue.. that flips!
 
 Why the name flip-flop-card, you ask? Well, hopefully it will be just as easy to
 apply in a project, as applying a set of flip flops to your feet. Oh, and the other names were taken, I guess 🤷‍♂️
 
-This is my first ever attempt making a _reusable_ npm-module, and it's mainly an exercise for me to learn how to package SFCs (Single File Components) for Vue via ***rollupjs***, as well as getting into the habit of maintaining and documenting on npm and git. Not expecting it to work perfectly for all purposes.
+This is my first attempt making a _reusable_ npm-module, and it's mainly an exercise for me to learn how to package SFCs (Single File Components) for Vue via ***rollupjs***, as well as getting into the habit of maintaining and documenting open-source on npm and git. Not expecting it to work perfectly for all purposes, but will try to maintain from time to time.
 
 Feel free to report issues, fork, send feature/pull-requests, or reuse for whatever purpose you see fit.
 
