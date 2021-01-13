@@ -17,8 +17,9 @@ Feel free to report issues, fork, send feature/pull-requests or reuse for whatev
 
 ### Preview
 
-![Preview placeholder](https://via.placeholder.com/350x400)
-![Preview placeholder](https://via.placeholder.com/350x400)
+![Preview horizontal flip](preview1.gif)
+![Preview vertical flip](preview2.gif)
+![Preview styled card](preview3.gif)
 
 ### Installation
 
