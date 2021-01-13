@@ -136,9 +136,9 @@ _back_ | _below_ styled cover-image and title | styled 🎴
 
 ### Todo
 
--[ ] Implement custom ways to trigger flip (not just `:hover`)
--[ ] Implement git release and tagging, link via changelog
--[ ] Improve styled card options. BgColorFill, alternative shading for title, etc..
+- [ ] Implement custom ways to trigger flip (not just `:hover`)
+- [ ] Implement git release and tagging, link via changelog
+- [ ] More options for styled card. Alternative shading for title, slots, etc
 
 ### Changelog
 
