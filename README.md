@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/npm/l/vue-flip-flop-card.svg)](https://img.shields.io/npm/l/vue-flip-flop-card.svg)
 [![downloads](https://img.shields.io/npm/dt/vue-flip-flop-card.svg)](https://www.npmjs.com/package/vue-flip-flop-card)
 
-<img align="left" height="200" src="https://raw.githubusercontent.com/joakimvrangum/vue-flip-flop-card/314a7fddd0faa90699dea4ee858a8165e57bff8c/icon.svg?token=AE3OCB4DZ5EBTIOYUUFXB42775NDO">
+<img align="left" height="200" src="https://raw.githubusercontent.com/joakimvrangum/vue-flip-flop-card/314a7fddd0faa90699dea4ee858a8165e57bff8c/icon.svg?sanitze=true">
 
 The is a card.. for vue.. that flips!
 
