@@ -19,9 +19,9 @@ Feel free to report issues, fork, send feature/pull-requests, or reuse for whate
 
 ## Preview
 
-![Preview horizontal flip](preview1.gif)
-![Preview vertical flip](preview2.gif)
-![Preview styled card](preview3.gif)
+![Preview horizontal flip](docs/preview1.gif)
+![Preview vertical flip](docs/preview2.gif)
+![Preview styled card](docs/preview3.gif)
 
 ## Installation
 
@@ -31,7 +31,10 @@ npm install vue-flip-flop-card --save
 
 ## Getting started
 
-Within a Vue project, add these lines in your main.js or index.js
+
+### Global registration
+
+Within a Vue project, add these lines in your main.js or index.js;
 
 ```js
 import Vue from 'vue';
@@ -40,20 +43,31 @@ import FlipFlopCard from 'vue-flip-flop-card';
 Vue.use(FlipFlopCard);
 ```
 
+### Local registration
+
+```js
+import FlipFlopCard from "vue-flip-flop-card";
+export default {
+    components: {FlipFlopCard}
+}
+```
+
 ## Example usage
 
 Component usage with just bare <u>**slots**</u> for custom content:
 
 ```vue
-<flip-flop-card>
-<slot name="front">
-  <h2>Front</h2>
-</slot>
-<slot name="back">
-  <div class="container" style="background-color: #4d9193">
-    <h2>Back</h2>
-  </div>
-</slot>
+<flip-flop-card :elevation="8" direction="horizontal">
+    <template slot="front">
+      <div class="container basic-card">
+        <h1>vue-flip-flop-card</h1>
+        <h2>horizontal flip</h2>
+      </div>
+    </template>
+    <template slot="back">
+      <div class="container basic-card">
+      </div>
+    </template>
 </flip-flop-card>
 ```
 
@@ -139,7 +153,7 @@ _back_ | _below_ styled cover-image and title | styled 🎴
 ## Todo
 
 - [ ] Implement custom ways to trigger flip (not just `:hover`)
-- [ ] Implement git release and tagging, link via changelog
+- [ ] Debug documentation/IDE support failing
 - [ ] More options for styled card. Alternative shading for title, slots, etc
 
 ## Changelog
