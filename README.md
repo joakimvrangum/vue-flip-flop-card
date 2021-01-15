@@ -1,7 +1,7 @@
 # vue-flip-flop-card
 
-[![npm version](https://img.shields.io/npm/v/vue-flip-flop-card.svg)](https://img.shields.io/npm/l/vue-flip-flop-card.svg)
-[![license](https://img.shields.io/npm/l/vue-flip-flop-card.svg)](https://img.shields.io/npm/l/vue-flip-flop-card.svg)
+[![npm version](https://img.shields.io/npm/v/vue-flip-flop-card.svg)](https://www.npmjs.com/package/vue-flip-flop-card)
+[![license](https://img.shields.io/npm/l/vue-flip-flop-card.svg)](https://www.npmjs.com/package/vue-flip-flop-card)
 [![downloads](https://img.shields.io/npm/dt/vue-flip-flop-card.svg)](https://www.npmjs.com/package/vue-flip-flop-card)
 
 <img align="left" height="200" src="https://raw.githubusercontent.com/joakimvrangum/vue-flip-flop-card/314a7fddd0faa90699dea4ee858a8165e57bff8c/icon.svg?sanitze=true">
