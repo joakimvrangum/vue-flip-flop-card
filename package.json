@@ -11,9 +11,11 @@
   ],
   "version": "0.2.0",
   "main": "dist/vue-flip-flop-card.ssr.js",
-  "browser": "dist/vue-flip-flop-card.esm.js",
   "module": "dist/vue-flip-flop-card.esm.js",
   "unpkg": "dist/vue-flip-flop-card.min.js",
+  "browser": {
+    "./sfc": "src/my-component.vue"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joakimvrangum/vue-flip-flop-card.git"
