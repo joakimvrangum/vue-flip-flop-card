@@ -14,7 +14,7 @@
   "module": "dist/vue-flip-flop-card.esm.js",
   "unpkg": "dist/vue-flip-flop-card.min.js",
   "browser": {
-    "./sfc": "src/my-component.vue"
+    "./sfc": "src/flip-flop-card.vue"
   },
   "repository": {
     "type": "git",
