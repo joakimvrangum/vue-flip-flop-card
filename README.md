@@ -157,8 +157,13 @@ _back_ | _below_ styled cover-image and title | styled 🎴
 - [ ] More options for styled card. Alternative shading for title, slots, etc
 
 ## Changelog
+0.2.1
+- package.json sfc browser reference updated
+- Updated documentation (jsDoc)
+- Updated package description
+- Fixed shield-links
+- Updated documentation, moved assets to docs
 
-...
 
 ## License
 
