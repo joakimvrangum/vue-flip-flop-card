@@ -5,7 +5,9 @@
       <span class="styled__title-span" :style="styledTitle">{{ styleObj.coverTitle }}</span>
     </h4>
     <div class="styled__content">
+      <!-- @slot Slot for the styled front of the card -->
       <slot v-if="front" name="front"></slot>
+      <!-- @slot Slot for the styled back of the card -->
       <slot v-if="back" name="back"></slot>
     </div>
   </div>

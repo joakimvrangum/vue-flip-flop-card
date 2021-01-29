@@ -8,6 +8,7 @@
         :class="[!disabled && direction, disabled && 'disabled']"
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
+      <!-- @slot Slot for front of the card -->
       <slot v-if="!styledFront" name="front"></slot>
       <styled-card v-else :styleObj="styledFront" front>
         <slot v-for="(_, name) in $slots" :name="name" :slot="name"/>
@@ -19,6 +20,7 @@
         :class="[!disabled && direction, disabled && 'disabled']"
         :style="{'transition': transformSpeed, 'box-shadow': elevationEffect}"
     >
+      <!-- @slot Slot for back of the card -->
       <slot v-if="!styledBack" name="back"></slot>
       <styled-card v-else :styleObj="styledBack" back>
         <slot v-for="(_, name) in $slots" :name="name" :slot="name"/>
@@ -30,13 +32,20 @@
 <script>
 import StyledCard from "./flip-flop-card-styled.vue";
 
+/**
+ * A card.. for vue.. that flips!
+ * @displayName Vue Flip Flop Card
+ * @author Joakim Vrangum
+ * @see {@link https://www.npmjs.com/package/vue-flip-flop-card)|NPM}
+ * @see {@link https://github.com/joakimvrangum/vue-flip-flop-card)|GitHub}
+ */
 export default {
   name: 'FlipFlopCard',
   components: {StyledCard},
   props: {
     /**
      * Height of the card in pixels
-     * @param {number} height
+     * Type: Number | Default: 450
      */
     height: {
       type: Number,
@@ -44,7 +53,7 @@ export default {
     },
     /**
      * Width of the card in pixels
-     * @param {number} width
+     * Type: Number | Default 350
      */
     width: {
       type: Number,
@@ -52,7 +61,7 @@ export default {
     },
     /**
      * Direction of the flip
-     * @param {string} either; horizontal or vertical
+     * @values horizontal, vertical
      */
     direction: {
       type: String,
@@ -62,8 +71,8 @@ export default {
       }
     },
     /**
-     * Disabled the flip effect of the card
-     * @param {boolean} false
+     * Disable the flip effect of the card
+     * @values true, false
      */
     disabled: {
       type: Boolean,
@@ -71,7 +80,7 @@ export default {
     },
     /**
      * A calculated speed on the transition flip-effect
-     * @param {number} value between 1-10; 1 being fastest and 10 being slowest
+     * @values Number between 1-10 | 1 being fastest and 10 being slowest
      */
     speed: {
       type: Number,
@@ -79,15 +88,23 @@ export default {
     },
     /**
      * The border box-shadow effect
-     * @param {number} value between 0-10. Default is 0
+     * @values Number between 1-10 | Default 0 (no effect)
      */
     elevation: {
       type: Number,
       default: 0
     },
+    /**
+     * Object for passing options to the styled front of the card
+     * @see {@link https://github.com/joakimvrangum/vue-flip-flop-card#styled-card-)|Docs}
+     */
     styledFront: {
       type: Object
     },
+    /**
+     * Object for passing options to the styled back of the card
+     * @see {@link https://github.com/joakimvrangum/vue-flip-flop-card#styled-card-)|Docs}
+     */
     styledBack: {
       type: Object
     }
